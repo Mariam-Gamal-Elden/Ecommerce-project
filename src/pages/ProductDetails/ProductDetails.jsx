@@ -37,8 +37,8 @@ export default function ProductDetails() {
 
     return <>
 
-        {productDetails ? <section className="grid gap-12 grid-cols-12">
-            <div className="col-span-3">
+        {productDetails ? <section className="grid gap-12 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+            <div className="lg:col-span-3 xs:col-span-1 sm:col-span-1 md:col-span-2">
 
                 <ReactImageGallery showPlayButton={false} showNav={false} items={productDetails.images.map((image) => {
                     return {
@@ -48,7 +48,7 @@ export default function ProductDetails() {
                 })} />
             </div>
 
-            <div className="col-span-9 space-y-3">
+            <div className="lg:col-span-9 space-y-3 xs:col-span-2 sm:col-span-3 md:col-span-6">
 
                 <div>
                     <h2 className="text-2xl text-gray-600 font-bold">{productDetails.title}</h2>
